@@ -1,0 +1,68 @@
+.firstDiv {
+  margin: 8px 32px 32px 16px;
+  padding: 32px 16px;
+  border: 1px solid rgb(20, 18, 18);
+}
+
+/* setati ca primul, al treilea si ultimul paragraf sa fie de culoare diferita de cat 
+celelalte. */
+div p:nth-child(1) {
+  color: yellow;
+  background-color: aquamarine;
+  width: 260px;
+}
+div p:nth-child(3) {
+  color: olivedrab;
+  background-color: yellow;
+  width: 260px;
+}
+
+div p:last-child {
+  color: mediumpurple;
+  background-color: wheat;
+  width: 260px;
+}
+
+/* creati un div cu inaltime de 75px si latime de 75px. un border de culoare neagra, 
+iar cand mausul este deasupra lui, border sa isi schimbe culoarea in rosu. */
+.hover {
+  width: 75px;
+  height: 75px;
+  border: 3px solid black;
+}
+
+.hover:hover {
+  border-color: red;
+}
+
+/* Creati un div cu inaltima de 50px si lungimea de 250px
+inauntru creati un alt div care sa aiba 1/2 din inaltimea parintelui si 1/4 din 
+lungimea parintelui, la fel faceti asa ca el sa fie pe centru relativ la parinte. */
+.parent {
+  margin: 10px auto;
+  height: 50px;
+  width: 250px;
+  background-color: brown;
+  position: relative;
+}
+.parent div {
+  top: 12px;
+  height: 50%;
+  width: 25%;
+  background-color: chartreuse;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Creati un titlu cu orice denumire apoi folosind pseudo elementele adaugati un 
+text: "inainte" in fata lui si "dupa" dupa el. */
+
+.header::before {
+  content: "Before";
+  margin-right: 15px;
+}
+
+.header::after {
+  content: "After";
+  margin-left: 15px;
+}
